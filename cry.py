@@ -1,6 +1,5 @@
 import random
 import time
-from colorama import Fore, Back, Style
 
 vals = {
     "0": {"binary": "0000", "hex": "0"},
@@ -29,14 +28,16 @@ conversion = {
 
 correct = 0
 wrongs = 0
-
+time = 0.0
 
 def main():
     global correct
-    global wrongs 
+    global wrongs
+    global time
 
     correct = 0
     wrongs = 0
+    time = 0.0
 
 
     print("MODES:\nDecimal to Binary -> dtb\nDecimal to Hex -> dth\nBinary to Decimal -> btd")
@@ -44,6 +45,8 @@ def main():
     print()
     mode = input("What mode? ")
     rounds = int(input("How rounds would you like to do? "))
+
+    
     
     if mode == 'dtb' or mode == 'dth':
         dtx(rounds, conversion[mode[-1]])
@@ -55,6 +58,11 @@ def main():
     # Printing out the score
     print("\nGame Complete! Final Score:")
     print("Correct: " + str(correct) + "\nIncorrect: " + str(wrongs) + "\nAccuracy: " + str((correct/rounds) * 100) + "%")
+
+    replay = input("Play Again? [y/n] ")
+    if replay == 'y':
+        print()
+        main()
 
 
 def dtx(rounds, converting_to):
