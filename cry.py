@@ -67,7 +67,7 @@ def main():
 
 def dtx(rounds, converting_to):
     for _ in range(rounds):
-        index = get_num(0, 15)
+        index = get_num()
         print(index)
         answer = input(": ")
         get_answer(index, converting_to, answer)
@@ -75,7 +75,7 @@ def dtx(rounds, converting_to):
 
 def btx(rounds, converting_to):
     for _ in range(rounds):
-        index = get_num(0, 15)
+        index = get_num()
         print(vals[index]['binary'])
         answer = input(": ")
         get_answer(index, converting_to, answer)
@@ -83,15 +83,15 @@ def btx(rounds, converting_to):
 
 def htx(rounds, converting_to):
     for _ in range(rounds):
-        index = get_num(0, 15)
+        index = get_num()
         print(vals[index]['hex'])
         answer = input(": ")
         get_answer(index, converting_to, answer)
 
 
 # Returns a string for dict lookup
-def get_num(min, max):
-    return str(random.randint(min, max))
+def get_num():
+    return str(random.randint(0, 15))
 
 
 def get_answer(index, mode, answer):
