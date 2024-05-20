@@ -1,7 +1,7 @@
 # NumberSystems
  
 ## Description
-This is a tool to practice converting between base 10, base 2, and base 16 number systems. It is designed around 4-bit numbers (0-8)
+This is a tool to practice converting between base 10, base 2, and base 16 number systems. It is designed around 4-bit numbers (0-15)
 
 ## Getting Started
 To run the program, you just need to download and run the command `python cry.py`
